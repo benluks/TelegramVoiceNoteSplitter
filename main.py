@@ -5,15 +5,13 @@ from natsort import natsorted
 
 from telethon import TelegramClient
 
-from audio_utils import convert_to_wav, split_and_save_audio
+from audio_utils import split_and_save_audio
 from ai_clients import get_gpt_response_from_audio_file
-from utils import format_transcription, format_prompt
 
 load_dotenv()
 api_id = os.getenv("API_ID")
 api_hash = os.getenv("API_HASH")
-amarens=int(os.getenv("AMARENS_ID"))
-me=int(os.getenv("ME_ID"))
+partner=int(os.getenv("PARTNER_ID"))
 
 client = TelegramClient("me", api_id, api_hash)
 
@@ -21,7 +19,7 @@ async def main():
     
     path = None
     
-    async for message in client.iter_messages(int(amarens)):
+    async for message in client.iter_messages(int(partner)):
         if message.voice:
             path = await message.download_media(os.getcwd())
             break

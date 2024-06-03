@@ -1,23 +1,6 @@
-import os
-import subprocess
-
-
 from utils import timestamp_to_seconds
 from ai_clients import parse_gpt_summary
 from pydub import AudioSegment
-
-
-def convert_to_wav(input_file, output_file, delete=True):
-    command = [
-        'ffmpeg',
-        '-i', input_file,
-        output_file
-    ]
-    if delete:
-        os.remove(input_file)
-        
-    subprocess.run(command, check=True)
-
 
 
 def split_audio(file_path, timestamps):
