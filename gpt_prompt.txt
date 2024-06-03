@@ -1,0 +1,11 @@
+The following is a transcription of a voice note from my girlfriend in srt format:
+
+{{TRANSCRIPTION}}
+
+Please indicate the main topics covered in the voice note, along with the time-stamps at which they begin. Please aim not to have sections lasting a few minutes each, and avoid sections shorter than 30 seconds.
+You output should be as follows:
+
+[1:23] TOPIC 1
+[4:56] TOPIC 2
+[7:89] TOPIC 3
+etc...
